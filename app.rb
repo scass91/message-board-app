@@ -3,7 +3,7 @@ require "sinatra/base"
 class MSNGR < Sinatra::Base
 
   get "/" do
-    "Hello"
+    erb :index
   end
 
 end
