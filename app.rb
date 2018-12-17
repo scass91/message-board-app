@@ -1,4 +1,5 @@
 require "sinatra/base"
+require_relative "lib/message"
 
 class MSNGR < Sinatra::Base
 
@@ -15,8 +16,10 @@ enable :sessions
   end
 
   get "/display" do
-    @msg_title = session[:msg_title]
-    @msg_text = session[:msg_text]
+   p @new_message = Message.new(session[:msg_title], session[:msg_text])
+    
+    # @msg_title = session[:msg_title]
+    # @msg_text = session[:msg_text]
     erb(:message)
   end
 

@@ -6,4 +6,6 @@ describe "#new" do
     expect(m.title).to eq("Carol")
     expect(m.content).to eq ("This is content")
   end
+
+  
 end
