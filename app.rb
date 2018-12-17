@@ -9,10 +9,15 @@ enable :sessions
   end
 
   post "/post_message" do
-    @msg_title = params[:msg_title]
-    @msg_text = params[:user_message]
-    erb(:message)
+    session[:msg_title] = params[:msg_title]
+    session[:msg_text] = params[:user_message]
+    redirect "/display"
   end
 
+  get "/display" do
+    @msg_title = session[:msg_title]
+    @msg_text = session[:msg_text]
+    erb(:message)
+  end
 
 end
