@@ -5,6 +5,7 @@ require "capybara"
 require "rspec"
 require "capybara/rspec"
 require "sinatra"
+require_relative "./features/feature_helper.rb"
 
 Capybara.app = MSNGR
 
