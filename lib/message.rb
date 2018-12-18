@@ -1,15 +1,11 @@
 class Message
 
-attr_reader :title, :content
+attr_reader :content
 
-  def initialize(title, content)
-    @title = title
+  def initialize(content)
     @content = content
-    @messages = []
+    @time = Time.now
+    
   end
-
-  def add_message
-   @messeges << @content
-  end 
 
 end

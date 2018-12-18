@@ -3,14 +3,14 @@ require_relative './message.rb'
 class MessageHistory
   attr_reader :history
 
-  def initialize(message_class = Message)
+  def initialize
     @history = []
-    @message_class = message_class
+    
   end
 
-  def add_message
-    message = @message_class.new
-    @history << message
+  def add_message (message)
+    @message = message
+    @history << @message
   end
 
 end
